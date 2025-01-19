@@ -9,7 +9,8 @@
 
 body { 
     background:url('Images/background_img_marvelmaniacs.jpg')no-repeat center center/cover;
-    
+    background-attachment: fixed;
+   
     font-family: "Unna", serif;
     color: #ffffff;
     width: 100%
@@ -192,3 +193,89 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+
+/* css for movies page */
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px rgb(74, 8, 94);
+}
+
+/* Slider Styles */
+.movie-slider {
+    position: relative; /* Set as relative for arrow positioning */
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    overflow: auto ; /* Hide overflowing cards */
+}
+
+.slider-container {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Ensure proper positioning within the slider */
+}
+
+/* Movie Card Styling */
+.movie-card {
+    min-width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+}
+
+/* Arrow Buttons */
+.arrow {
+    position: absolute; /* Makes the arrows fixed relative to the parent container */
+    top: 50%; /* Centers the arrows vertically */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2; /* Ensures arrows are always on top */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.arrow:hover {
+    background-color: #080001;
+}
+
+.arrow.left {
+    left: 10px; /* Static position on the left side */
+}
+
+.arrow.right {
+    right: 10px; /* Static position on the right side */
+}
+
+/* Arrow Prevent Moving Issue Fix */
+.movie-slider .arrow {
+    pointer-events: auto; /* Ensure arrows are clickable without being affected by the sliding container */
+}
+
+
+
+
+
+
