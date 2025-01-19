@@ -215,7 +215,7 @@ h2 {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    overflow: auto ; /* Hide overflowing cards */
+    overflow:hidden; /* Hide overflowing cards */
 }
 
 .slider-container {
@@ -243,7 +243,7 @@ h2 {
 
 /* Arrow Buttons */
 .arrow {
-    position: absolute; /* Makes the arrows fixed relative to the parent container */
+    position:sticky; /* Makes the arrows fixed relative to the parent container */
     top: 50%; /* Centers the arrows vertically */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6);
@@ -276,6 +276,118 @@ h2 {
 
 
 
+/* About us Section */
+.about-section {
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.565);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Team Section */
+.team-section {
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.565);
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 1px solid #c20bde3d;
+    background-color: rgba(0, 0, 0, 0.42);
+    box-shadow: 0 0 60px rgba(255, 5, 230, 0.1);
+}
+
+.team-member:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info {
+    max-width: 600px;
+}
+
+.member-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.member-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #cf77ef;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-photo {
+        margin-bottom: 20px;
+    }
+
+    .member-info {
+        text-align: center;
+    }
+}
 
 
 
